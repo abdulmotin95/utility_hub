@@ -76,9 +76,7 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
         ),
         child: Column(
           children: [
-            const SizedBox(height: kToolbarHeight + 20), // AppBar spacing
-
-            // Stopwatch Circle
+            const SizedBox(height: kToolbarHeight + 20),
             Expanded(
               child: Center(
                 child: Container(
@@ -113,8 +111,6 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
                 ),
               ),
             ),
-
-            // Action Buttons
             Padding(
               padding: const EdgeInsets.only(bottom: 40, left: 30, right: 30),
               child: Row(

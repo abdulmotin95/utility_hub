@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-// Meal Model
 class Meal {
   String name;
   String description;
@@ -17,168 +16,168 @@ class Meal {
   });
 }
 
-// Sample Meals (22 meals with unique images)
+
 List<Meal> sampleMeals = [
   Meal(
     name: 'Oatmeal with Fruits',
     description: 'Healthy breakfast with oats, banana, and berries.',
     calories: 350,
     mealType: 'Breakfast',
-    imageUrl: 'https://i.imgur.com/Y1wqVh1.jpg', // oatmeal
+    imageUrl: 'https://i.imgur.com/Y1wqVh1.jpg',
   ),
   Meal(
     name: 'Grilled Chicken Salad',
     description: 'Lunch with grilled chicken, lettuce, and veggies.',
     calories: 450,
     mealType: 'Lunch',
-    imageUrl: 'https://i.imgur.com/Tw5QKjA.jpg', // grilled chicken salad
+    imageUrl: 'https://i.imgur.com/Tw5QKjA.jpg',
   ),
   Meal(
     name: 'Quinoa & Veggies',
     description: 'Dinner with quinoa and mixed vegetables.',
     calories: 400,
     mealType: 'Dinner',
-    imageUrl: 'https://i.imgur.com/pN9C1D2.jpg', // quinoa & veggies
+    imageUrl: 'https://i.imgur.com/pN9C1D2.jpg',
   ),
   Meal(
     name: 'Protein Shake',
     description: 'Snack with whey protein, milk, and banana.',
     calories: 200,
     mealType: 'Snack',
-    imageUrl: 'https://i.imgur.com/x3A7pGZ.jpg', // protein shake
+    imageUrl: 'https://i.imgur.com/x3A7pGZ.jpg',
   ),
   Meal(
     name: 'Avocado Toast',
     description: 'Toast with avocado, egg, and cherry tomatoes.',
     calories: 320,
     mealType: 'Breakfast',
-    imageUrl: 'https://i.imgur.com/0aF6hA7.jpg', // avocado toast
+    imageUrl: 'https://i.imgur.com/0aF6hA7.jpg',
   ),
   Meal(
     name: 'Greek Yogurt Parfait',
     description: 'Yogurt with granola, honey, and berries.',
     calories: 280,
     mealType: 'Breakfast',
-    imageUrl: 'https://i.imgur.com/6LZ8J0u.jpg', // yogurt parfait
+    imageUrl: 'https://i.imgur.com/6LZ8J0u.jpg',
   ),
   Meal(
     name: 'Turkey Sandwich',
     description: 'Whole grain bread with turkey and veggies.',
     calories: 400,
     mealType: 'Lunch',
-    imageUrl: 'https://i.imgur.com/ZXB2F0U.jpg', // turkey sandwich
+    imageUrl: 'https://i.imgur.com/ZXB2F0U.jpg',
   ),
   Meal(
     name: 'Veggie Wrap',
     description: 'Wrap filled with mixed vegetables and hummus.',
     calories: 350,
     mealType: 'Lunch',
-    imageUrl: 'https://i.imgur.com/2QHc8VJ.jpg', // veggie wrap
+    imageUrl: 'https://i.imgur.com/2QHc8VJ.jpg',
   ),
   Meal(
     name: 'Grilled Salmon',
     description: 'Salmon fillet with steamed veggies.',
     calories: 500,
     mealType: 'Dinner',
-    imageUrl: 'https://i.imgur.com/pjYl8yS.jpg', // grilled salmon
+    imageUrl: 'https://i.imgur.com/pjYl8yS.jpg',
   ),
   Meal(
     name: 'Chicken Stir Fry',
     description: 'Chicken with broccoli, carrots, and rice.',
     calories: 450,
     mealType: 'Dinner',
-    imageUrl: 'https://i.imgur.com/H0q6h0E.jpg', // chicken stir fry
+    imageUrl: 'https://i.imgur.com/H0q6h0E.jpg',
   ),
   Meal(
     name: 'Almonds & Walnuts',
     description: 'Handful of mixed nuts for a quick snack.',
     calories: 180,
     mealType: 'Snack',
-    imageUrl: 'https://i.imgur.com/8m9N7Qw.jpg', // nuts
+    imageUrl: 'https://i.imgur.com/8m9N7Qw.jpg',
   ),
   Meal(
     name: 'Fruit Smoothie',
     description: 'Blended banana, mango, and berries smoothie.',
     calories: 220,
     mealType: 'Snack',
-    imageUrl: 'https://i.imgur.com/7gG6RZk.jpg', // fruit smoothie
+    imageUrl: 'https://i.imgur.com/7gG6RZk.jpg',
   ),
   Meal(
     name: 'Pancakes with Syrup',
     description: 'Fluffy pancakes topped with maple syrup.',
     calories: 400,
     mealType: 'Breakfast',
-    imageUrl: 'https://i.imgur.com/VqH6dXU.jpg', // pancakes
+    imageUrl: 'https://i.imgur.com/VqH6dXU.jpg',
   ),
   Meal(
     name: 'Egg Muffins',
     description: 'Baked egg muffins with spinach and cheese.',
     calories: 300,
     mealType: 'Breakfast',
-    imageUrl: 'https://i.imgur.com/9o9zD2m.jpg', // egg muffins
+    imageUrl: 'https://i.imgur.com/9o9zD2m.jpg',
   ),
   Meal(
     name: 'Caprese Salad',
     description: 'Tomato, mozzarella, and basil with olive oil.',
     calories: 350,
     mealType: 'Lunch',
-    imageUrl: 'https://i.imgur.com/PCn5E8m.jpg', // caprese salad
+    imageUrl: 'https://i.imgur.com/PCn5E8m.jpg',
   ),
   Meal(
     name: 'Sushi Rolls',
     description: 'Assorted sushi rolls with rice and fish.',
     calories: 400,
     mealType: 'Lunch',
-    imageUrl: 'https://i.imgur.com/J7Zjq6Y.jpg', // sushi rolls
+    imageUrl: 'https://i.imgur.com/J7Zjq6Y.jpg',
   ),
   Meal(
     name: 'Beef Steak',
     description: 'Grilled beef steak with side salad.',
     calories: 550,
     mealType: 'Dinner',
-    imageUrl: 'https://i.imgur.com/v2L1s1A.jpg', // beef steak
+    imageUrl: 'https://i.imgur.com/v2L1s1A.jpg',
   ),
   Meal(
     name: 'Veggie Pasta',
     description: 'Whole wheat pasta with tomato sauce and veggies.',
     calories: 420,
     mealType: 'Dinner',
-    imageUrl: 'https://i.imgur.com/Tl7OXo3.jpg', // veggie pasta
+    imageUrl: 'https://i.imgur.com/Tl7OXo3.jpg',
   ),
   Meal(
     name: 'Trail Mix',
     description: 'Mix of dried fruits and nuts.',
     calories: 200,
     mealType: 'Snack',
-    imageUrl: 'https://i.imgur.com/gJbqRrl.jpg', // trail mix
+    imageUrl: 'https://i.imgur.com/gJbqRrl.jpg',
   ),
   Meal(
     name: 'Cheese & Crackers',
     description: 'Sliced cheese with whole grain crackers.',
     calories: 250,
     mealType: 'Snack',
-    imageUrl: 'https://i.imgur.com/NQxPqWc.jpg', // cheese & crackers
+    imageUrl: 'https://i.imgur.com/NQxPqWc.jpg',
   ),
   Meal(
     name: 'Chia Pudding',
     description: 'Chia seeds pudding with almond milk and berries.',
     calories: 280,
     mealType: 'Breakfast',
-    imageUrl: 'https://i.imgur.com/AoRxj7d.jpg', // chia pudding
+    imageUrl: 'https://i.imgur.com/AoRxj7d.jpg',
   ),
   Meal(
     name: 'Tofu Stir Fry',
     description: 'Tofu with mixed vegetables and soy sauce.',
     calories: 400,
     mealType: 'Dinner',
-    imageUrl: 'https://i.imgur.com/3bWkKJl.jpg', // tofu stir fry
+    imageUrl: 'https://i.imgur.com/3bWkKJl.jpg',
   ),
   Meal(
     name: 'Hummus & Veggies',
     description: 'Carrot and cucumber sticks with hummus dip.',
     calories: 180,
     mealType: 'Snack',
-    imageUrl: 'https://i.imgur.com/6WdT7G2.jpg', // hummus & veggies
+    imageUrl: 'https://i.imgur.com/6WdT7G2.jpg',
   ),
 ];
 
@@ -203,7 +202,6 @@ class _DietPlanScreenState extends State<DietPlanScreen> {
     int totalCalories =
     filteredMeals.fold(0, (sum, meal) => sum + meal.calories);
 
-    // Background gradient colors
     final Gradient backgroundGradient = const LinearGradient(
       colors: [
         Color(0xFF5C91D4),
@@ -230,11 +228,10 @@ class _DietPlanScreenState extends State<DietPlanScreen> {
         ),
         child: Column(
           children: [
-            // Filter dropdown with white background
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
               decoration: BoxDecoration(
-                color: Colors.white, // white background
+                color: Colors.white,
                 borderRadius: BorderRadius.circular(12),
                 boxShadow: [
                   BoxShadow(
@@ -271,7 +268,6 @@ class _DietPlanScreenState extends State<DietPlanScreen> {
 
             const SizedBox(height: 12),
 
-            // Total calories
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -285,7 +281,6 @@ class _DietPlanScreenState extends State<DietPlanScreen> {
 
             const SizedBox(height: 12),
 
-            // Meal list with zig-zag cards
             Expanded(
               child: ListView.builder(
                 itemCount: filteredMeals.length,

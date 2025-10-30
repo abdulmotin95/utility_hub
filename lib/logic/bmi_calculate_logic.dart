@@ -1,18 +1,16 @@
-// bmi_logic.dart
 
-import 'dart:math';
 import 'dart:ui';
 
 class BMILogic {
-  final int weight; // kg
-  final double height; // ft
+  final int weight;
+  final double height;
 
   BMILogic({required this.weight, required this.height});
 
   double _calculateBMI() {
-    // 1 foot = 0.3048 meters
+
     double heightInMeters = height * 0.3048;
-    // BMI formula: weight / (height_in_meters * height_in_meters)
+
     return weight / (heightInMeters * heightInMeters);
   }
 

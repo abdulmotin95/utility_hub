@@ -6,7 +6,6 @@ import 'meal_plan.dart';
 class AllFeaturesPage extends StatelessWidget {
   const AllFeaturesPage({super.key});
 
-  // 🔹 Custom Feature Button with modern design
   Widget _buildFeatureButton({
     required BuildContext context,
     required String title,
@@ -120,7 +119,7 @@ class AllFeaturesPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 40),
 
-                  // 🔹 Feature Buttons
+
                   _buildFeatureButton(
                     context: context,
                     title: "BMI Calculator",
@@ -131,13 +130,13 @@ class AllFeaturesPage extends StatelessWidget {
                     context: context,
                     title: "Custom Goals Reminder",
                     icon: Icons.flag_circle_rounded,
-                    navigateTo: const Placeholder(), // Replace later
+                    navigateTo: const Placeholder(),
                   ),
                   _buildFeatureButton(
                     context: context,
                     title: "Diet Plan / Meal Suggestions",
                     icon: Icons.restaurant_menu,
-                    navigateTo: const DietPlanScreen(), // Replace later
+                    navigateTo: const DietPlanScreen(),
                   ),
 
                   const SizedBox(height: 50),

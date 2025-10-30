@@ -159,14 +159,12 @@ class _TimerScreenState extends State<TimerScreen> {
                 ),
               ),
               const SizedBox(height: 100),
-              // Circular progress below picker
               SizedBox(
                 width: 120,
                 height: 120,
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
-                    // Background circle
                     Container(
                       width: 120,
                       height: 120,
@@ -182,7 +180,6 @@ class _TimerScreenState extends State<TimerScreen> {
                         ],
                       ),
                     ),
-                    // Gradient Circular Progress
                     SizedBox(
                       width: 120,
                       height: 120,
@@ -195,7 +192,6 @@ class _TimerScreenState extends State<TimerScreen> {
                         backgroundColor: Colors.white70,
                       ),
                     ),
-                    // Center small circle
                     Container(
                       width: 30,
                       height: 30,
@@ -238,7 +234,6 @@ class _TimerScreenState extends State<TimerScreen> {
                         child: Icon(Icons.refresh, color: isTimeSet ? Colors.white : Colors.white38, size: 28),
                       ),
                     ),
-                    // Start/Pause button
                     InkWell(
                       onTap: isTimeSet || logic.isRunning ? _startStopTimer : null,
                       borderRadius: BorderRadius.circular(30),

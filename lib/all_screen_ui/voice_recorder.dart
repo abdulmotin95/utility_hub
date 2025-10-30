@@ -97,7 +97,6 @@ class _VoiceRecorderPageState extends State<VoiceRecorderPage> {
 
                 const SizedBox(height: 30),
 
-                // Start/Stop Button below circle
                 ElevatedButton.icon(
                   onPressed: () {
                     if (logic.isRecording) {
@@ -138,7 +137,6 @@ class _VoiceRecorderPageState extends State<VoiceRecorderPage> {
                 ),
                 const SizedBox(height: 10),
 
-                // Saved Recordings List
                 Expanded(
                   child: logic.recordings.isEmpty
                       ? const Center(

@@ -105,7 +105,6 @@ class _BmiCalculateScreenState extends State<BmiCalculateScreen> {
                   style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF4CAF50)),
                 ),
                 const SizedBox(height: 30),
-                // Close Button
                 Container(
                   width: double.infinity,
                   height: 55,
@@ -236,7 +235,6 @@ class _BmiCalculateScreenState extends State<BmiCalculateScreen> {
                         valueTextColor: _valueTextColor,
                         buttonColor: _rulerIndicatorColor)),
                 const SizedBox(height: 40),
-                // Calculate Button
                 Container(
                   height: 60,
                   decoration: BoxDecoration(
@@ -263,7 +261,7 @@ class _BmiCalculateScreenState extends State<BmiCalculateScreen> {
   }
 }
 
-/// WeightAgeCard class
+
 class WeightAgeCard extends StatelessWidget {
   final String title;
   final int value;
@@ -320,7 +318,7 @@ class WeightAgeCard extends StatelessWidget {
   }
 }
 
-/// HeightCard class
+
 class HeightCard extends StatelessWidget {
   final double height;
   final Function(double) onHeightChanged;

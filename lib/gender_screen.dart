@@ -233,7 +233,7 @@ class _GenderSelectionScreenState extends State<GenderSelectionScreen>
         padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 15),
         decoration: BoxDecoration(
           color: isSelected ? genderTextColor.withOpacity(0.1) : Colors.white.withOpacity(0.9),
-          borderRadius: BorderRadius.circular(20.0), // A little more rounded
+          borderRadius: BorderRadius.circular(20.0),
           boxShadow: [
             BoxShadow(
               color: isSelected ? genderTextColor.withOpacity(0.7) : Colors.black.withOpacity(0.15),
@@ -248,7 +248,7 @@ class _GenderSelectionScreenState extends State<GenderSelectionScreen>
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
-              radius: 45, // Slightly larger avatar
+              radius: 45,
               backgroundColor: Colors.transparent,
               backgroundImage: NetworkImage(genderImageUrl),
             ),
@@ -258,7 +258,7 @@ class _GenderSelectionScreenState extends State<GenderSelectionScreen>
             Text(
               genderText,
               style: TextStyle(
-                fontSize: 24, // Slightly larger font
+                fontSize: 24,
                 fontWeight: FontWeight.w900,
                 color: genderTextColor,
               ),

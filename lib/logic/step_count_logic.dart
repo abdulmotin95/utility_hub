@@ -2,15 +2,14 @@ import 'package:pedometer/pedometer.dart';
 
 class StepCounterLogic {
   late Stream<StepCount> _stepCountStream;
-  int _initialStep = 0; // App start reference
+  int _initialStep = 0;
   int _steps = 0;
 
-  final double stepLengthInMeters; // Step length in meters
-  final double kcalPerStep;        // Calories per step
+  final double stepLengthInMeters;
+  final double kcalPerStep;
 
   StepCounterLogic({this.stepLengthInMeters = 0.762, this.kcalPerStep = 0.04});
 
-  // Stream of steps starting from app launch
   Stream<int> getStepCountStream() {
     _stepCountStream = Pedometer.stepCountStream;
 
@@ -24,8 +23,7 @@ class StepCounterLogic {
     });
   }
 
-  // Derived metrics (real-time)
   double get distanceKm => _steps * stepLengthInMeters / 1000;
   double get kcal => _steps * kcalPerStep;
-  double get cal => kcal * 0.01; // Small demo value for UI
+  double get cal => kcal * 0.01;
 }

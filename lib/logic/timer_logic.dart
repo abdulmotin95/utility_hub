@@ -7,8 +7,8 @@ class TimerLogic {
   int seconds = 0;
   bool isRunning = false;
 
-  int totalDuration = 0; // Total time in seconds
-  int remainingSeconds = 0; // Remaining time
+  int totalDuration = 0;
+  int remainingSeconds = 0;
 
   bool get isTimeSet => hours > 0 || minutes > 0 || seconds > 0;
 

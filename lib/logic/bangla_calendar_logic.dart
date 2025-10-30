@@ -1,5 +1,4 @@
 class BanglaDateConverter {
-  /// Returns days in each Bangla month based on English leap year.
   static List<int> getDaysInMonth(int year) {
     bool isLeap = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
     return [
@@ -7,32 +6,32 @@ class BanglaDateConverter {
     ];
   }
 
-  /// Calculates current Bangla Date from English Date.
+
   static Map<String, int> calculateBanglaDate(DateTime date, {int? manualYearOffset}) {
     int year = date.year;
     List<int> daysInMonth = getDaysInMonth(year);
 
     int banglaYear;
 
-    // 🔹 Normal year calculation based on 14 April = 1 Boishakh
+
     if (date.month > 4 || (date.month == 4 && date.day >= 14)) {
       banglaYear = year - 593;
     } else {
       banglaYear = year - 594;
     }
 
-    // 🔹 Optional manual year offset (user can modify year manually)
+
     if (manualYearOffset != null) {
       banglaYear += manualYearOffset;
     }
 
-    // 🔹 If year crosses Boishakh 14 next year, auto increment year
+
     DateTime nextBoishakh = DateTime(year + 1, 4, 14);
     if (date.isAfter(nextBoishakh)) {
       banglaYear++;
     }
 
-    // 🔹 Calculate month and date
+
     DateTime boishakhStart = DateTime(year, 4, 14);
     int diff = date.difference(boishakhStart).inDays;
 
@@ -67,7 +66,7 @@ class BanglaDateConverter {
     };
   }
 
-  /// Converts English digits to Bangla digits.
+
   static String convertToBanglaDigits(int number) {
     const Map<String, String> banglaDigits = {
       '0': '০', '1': '১', '2': '২', '3': '৩', '4': '৪',
@@ -81,7 +80,7 @@ class BanglaDateConverter {
     return banglaStr;
   }
 
-  /// 🧭 Helper method to get full formatted Bangla Date String
+
   static String getFormattedBanglaDate(DateTime date, {int? manualYearOffset}) {
     final result = calculateBanglaDate(date, manualYearOffset: manualYearOffset);
     final banglaYear = convertToBanglaDigits(result['banglaYear']!);

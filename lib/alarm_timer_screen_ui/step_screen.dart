@@ -64,7 +64,6 @@ class _StepCounterPageState extends State<StepCounterPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // 🔹 Progress Circle
                   CircularPercentIndicator(
                     radius: 120.0,
                     lineWidth: 15.0,
@@ -90,8 +89,6 @@ class _StepCounterPageState extends State<StepCounterPage> {
                     animationDuration: 800,
                   ),
                   const SizedBox(height: 30),
-
-                  // 🔹 Step Count
                   Text(
                     '$_steps',
                     style: const TextStyle(
@@ -105,8 +102,6 @@ class _StepCounterPageState extends State<StepCounterPage> {
                         fontSize: 20, color: Colors.white70, letterSpacing: 1.5),
                   ),
                   const SizedBox(height: 40),
-
-                  // 🔹 Kcal and Km Row
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -128,7 +123,6 @@ class _StepCounterPageState extends State<StepCounterPage> {
                   ),
                   const SizedBox(height: 40),
 
-                  // 🔹 Calorie Burn
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
                     decoration: BoxDecoration(
@@ -163,8 +157,6 @@ class _StepCounterPageState extends State<StepCounterPage> {
                   ),
 
                   const SizedBox(height: 40),
-
-                  // 🔹 More Feature Tile
               GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -173,18 +165,17 @@ class _StepCounterPageState extends State<StepCounterPage> {
                   );
                 },
                 child: Container(
-                  width: double.infinity, // পুরো width
+                  width: double.infinity,
                   padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
                   decoration: BoxDecoration(
-                    // Gradient color add kora holo
                     gradient: const LinearGradient(
                       colors: [
                         Color(0xFF5C91D4),
                         Color(0xFF4451C8),
                         Color(0xFF1F4ABE),
                       ],
-                      begin: Alignment.topLeft, // Gradient shuru hobe top-left theke
-                      end: Alignment.bottomRight, // Gradient shesh hobe bottom-right e
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
                     ),
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(color: Colors.white70, width: 1.5),
@@ -192,7 +183,6 @@ class _StepCounterPageState extends State<StepCounterPage> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      // Icon change kora holo (ekta example hisebe Icons.settings use kora holo)
                       Icon(Icons.more, size: 28, color: Colors.white),
                       SizedBox(width: 12),
                       Text(
