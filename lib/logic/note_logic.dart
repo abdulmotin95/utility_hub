@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -73,6 +74,9 @@ class NotesLogic {
   Future<File> _generatePDF(String text, String title) async {
     final pdf = pw.Document();
 
+    final fontData = await rootBundle.load('assets/fonts/kalpurush.ttf');
+    final ttf = pw.Font.ttf(fontData);
+
     pdf.addPage(
       pw.MultiPage(
         pageFormat: PdfPageFormat.a4,
@@ -85,12 +89,17 @@ class NotesLogic {
               style: pw.TextStyle(
                 fontSize: 22,
                 fontWeight: pw.FontWeight.bold,
+                font: ttf,
               ),
             ),
           ),
           pw.Paragraph(
             text: text,
-            style: const pw.TextStyle(fontSize: 14, height: 1.5),
+            style: pw.TextStyle(
+              fontSize: 14,
+              height: 1.5,
+              font: ttf,
+            ),
           ),
         ],
       ),

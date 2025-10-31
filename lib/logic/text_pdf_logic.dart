@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:path_provider/path_provider.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:pdf/pdf.dart';
@@ -29,6 +30,9 @@ class TextPdfLogic {
 
     final pdf = pw.Document();
 
+    final fontData = await rootBundle.load('assets/fonts/kalpurush.ttf');
+    final ttf = pw.Font.ttf(fontData);
+
     final paragraphs = text.split('\n');
 
     pdf.addPage(
@@ -38,7 +42,11 @@ class TextPdfLogic {
         build: (pw.Context context) {
           return paragraphs.map((p) => pw.Text(
             p,
-            style: const pw.TextStyle(fontSize: 12, height: 1.4),
+            style: pw.TextStyle(
+              fontSize: 12,
+              height: 1.4,
+              font: ttf,
+            ),
             textAlign: pw.TextAlign.justify,
           )).toList();
         },
