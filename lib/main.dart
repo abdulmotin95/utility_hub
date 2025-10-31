@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
-import 'all_screen_ui/home_screen.dart';
+import 'package:hello/splash_screen.dart';
 import 'package:timezone/data/latest.dart' as tz;
 
 List<CameraDescription>? cameras;
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepOrange,
         scaffoldBackgroundColor: const Color(0xFFDFF6FF),
       ),
-      home: const HomeScreen(),
+      home: const SplashScreen(),
     );
   }
 }

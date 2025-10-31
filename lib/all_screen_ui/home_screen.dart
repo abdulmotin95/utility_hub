@@ -37,6 +37,10 @@ class HomeScreen extends StatelessWidget {
                 backgroundColor: Colors.transparent,
                 elevation: 0,
                 expandedHeight: 130,
+                leading: IconButton(
+                  icon: const Icon(Icons.arrow_back_ios_new, color: Colors.white),
+                  onPressed: () => Navigator.pop(context),
+                ),
                 flexibleSpace: const FlexibleSpaceBar(
                   centerTitle: true,
                   title: Text(
@@ -50,7 +54,6 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-
               SliverPadding(
                 padding: const EdgeInsets.all(20),
                 sliver: SliverGrid.count(
@@ -98,7 +101,7 @@ class HomeScreen extends StatelessWidget {
                       title: 'Calculator',
                       subtitle: 'Quick Math',
                       icon: Icons.calculate,
-                      color: Colors.tealAccent.shade700,
+                      color: Colors.tealAccent,
                       onTap: () {
                         Navigator.push(
                           context,
@@ -114,7 +117,7 @@ class HomeScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) =>  CompassScreen()),
+                          MaterialPageRoute(builder: (context) => CompassScreen()),
                         );
                       },
                     ),
@@ -162,7 +165,7 @@ class HomeScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) =>  BanglaCalendarScreen()),
+                          MaterialPageRoute(builder: (context) => BanglaCalendarScreen()),
                         );
                       },
                     ),

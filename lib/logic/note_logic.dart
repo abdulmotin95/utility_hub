@@ -9,7 +9,6 @@ import 'package:open_file/open_file.dart';
 class NotesLogic {
   List<Map<String, String>> notes = [];
 
-
   Future<void> loadNotes() async {
     final prefs = await SharedPreferences.getInstance();
     final storedNotes = prefs.getString('notes');
@@ -19,13 +18,11 @@ class NotesLogic {
     }
   }
 
-
   Future<void> saveNotes() async {
     final prefs = await SharedPreferences.getInstance();
     final encoded = jsonEncode(notes);
     await prefs.setString('notes', encoded);
   }
-
 
   Future<void> addNote(Map<String, String> note) async {
     final text = note['content'] ?? '';
@@ -73,7 +70,6 @@ class NotesLogic {
     }
   }
 
-
   Future<File> _generatePDF(String text, String title) async {
     final pdf = pw.Document();
 
@@ -82,25 +78,27 @@ class NotesLogic {
         pageFormat: PdfPageFormat.a4,
         margin: const pw.EdgeInsets.all(24),
         build: (pw.Context context) => [
-          pw.Text(
-            title,
-            style: pw.TextStyle(
-              fontSize: 20,
+          pw.Header(
+            level: 0,
+            child: pw.Text(
+              title,
+              style: pw.TextStyle(
+                fontSize: 22,
+                fontWeight: pw.FontWeight.bold,
+              ),
             ),
           ),
-
-          pw.SizedBox(height: 12),
-          pw.Text(
-            text,
-            style: const pw.TextStyle(fontSize: 14, height: 1.4),
-            textAlign: pw.TextAlign.justify,
+          pw.Paragraph(
+            text: text,
+            style: const pw.TextStyle(fontSize: 14, height: 1.5),
           ),
         ],
       ),
     );
 
     final dir = await getApplicationDocumentsDirectory();
-    final filePath = '${dir.path}/note_${DateTime.now().millisecondsSinceEpoch}.pdf';
+    final filePath =
+        '${dir.path}/note_${DateTime.now().millisecondsSinceEpoch}.pdf';
     final file = File(filePath);
     await file.writeAsBytes(await pdf.save());
 
